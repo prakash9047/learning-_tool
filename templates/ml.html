@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML - KITE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Reset and basic styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #333;
+            color: #fff;
+        }
+
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .content {
+            flex: 0 0 calc(75% - 20px);
+            padding: 20px;
+        }
+
+        .sidebar {
+            flex: 0 0 calc(25% - 20px);
+            background-color: rgba(51, 51, 51, 0.9);
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .sidebar h3 {
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 5px;
+        }
+
+        .sidebar ul li a {
+            color: #fff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .sidebar ul li a i {
+            margin-right: 10px;
+        }
+
+        .image-box {
+            width: 100%;
+            max-width: 400px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 25px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .explanation {
+            margin-top: 20px;
+            text-align: justify;
+        }
+        .video-box {
+            width: 100%;
+            max-width: 800px;
+            height: 0;
+            padding-bottom: 45%;
+            position: relative;
+            border-radius: 25px;
+            margin: 20px auto; /* Centering the video box */
+            overflow: hidden;
+        }
+
+        .video-box iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .register-button {
+            display: block;
+            width: 200px;
+            padding: 10px 20px;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 1.2rem;
+            text-align: center;
+            text-decoration: none;
+            margin: 20px auto;
+            position: relative; /* Added position relative for dropdown positioning */
+        }
+
+        .register-button:hover {
+            background-color: #333;
+        }
+
+        .register-dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            z-index: 1;
+            top: 50px; /* Adjust as needed */
+            right: 0; /* Adjust as needed */
+        }
+
+        .register-dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .register-dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .content,
+            .sidebar {
+                flex: 0 0 100%;
+            }
+
+            .sidebar {
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1 class="ml-heading">Machine Learning (ML)</h1>
+
+            <div class="image-box">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.KeF6JasZLDD4ultyOumqZwHaD_&pid=Api&rs=1&c=1&qlt=95&w=208&h=112" alt="ML Image">
+            </div>
+
+            <div class="explanation">
+                <p>Machine Learning (ML) is a branch of Artificial Intelligence (AI) that focuses on the development of algorithms and statistical models that enable computer systems to perform specific tasks effectively without being explicitly programmed. ML algorithms learn from data, identify patterns, and make decisions or predictions based on the insights gained from that data.</p>
+
+                <p>The primary goal of ML is to build systems that can learn from experience and improve their performance over time. This is achieved by exposing the algorithms to large amounts of data, which they use to identify patterns and relationships. The algorithms then use these patterns to make informed decisions or predictions on new, unseen data.</p>
+
+                <p>ML has various applications across different industries, including computer vision, natural language processing, recommendation systems, fraud detection, healthcare, finance, and many more. With the increasing availability of data and computing power, ML techniques are becoming more sophisticated and are being applied to solve increasingly complex problems.</p>
+
+                <p>One of the key advantages of ML is its ability to handle complex and non-linear problems that are difficult or impossible to solve using traditional programming methods. ML algorithms can discover patterns and relationships in data that may not be apparent to humans, enabling them to make accurate predictions or decisions in situations where explicit rules or models are difficult to define.</p>
+
+                <p>ML can be broadly categorized into three main types: supervised learning, unsupervised learning, and reinforcement learning. Supervised learning involves training the algorithm with labeled data, where the desired output is provided along with the input data. The algorithm learns to map the input to the output based on the training examples. Unsupervised learning, on the other hand, involves finding patterns and relationships in unlabeled data without any specific target output. Reinforcement learning is a type of ML where an agent learns to make decisions and take actions in an environment to maximize a reward signal.</p>
+
+                <p>Some popular ML algorithms and techniques include linear regression, logistic regression, decision trees, random forests, support vector machines, neural networks, and deep learning. These algorithms are used in various applications such as image recognition, natural language processing, speech recognition, predictive analytics, and recommendation systems.</p>
+
+                <p>As ML continues to evolve and become more advanced, it is expected to have a profound impact on various industries and aspects of our lives. However, it is important to consider the ethical implications and potential biases that can arise from the use of ML systems, particularly in sensitive areas such as healthcare, finance, and social decision-making.</p>
+            </div>
+
+            <div class="video-box">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/gmvvaobm7eQ?list=PLeo1K3hjS3uvCeTYTeyfe0-rN5r8zn9rw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <div class="register-button" id="register-dropdown">REGISTER
+                <div class="register-dropdown-content">
+                    <a href="https://onlinecourses.nptel.ac.in/noc23_cs87/preview">Beginner</a>
+                    <a href="https://onlinecourses.nptel.ac.in/noc23_ee87/preview">Intermediate</a>
+                    <a href="https://onlinecourses.nptel.ac.in/noc24_cs41/preview">Advanced</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <h3>Related Topics</h3>
+            <ul>
+                <li><a href="#"><i class="fas fa-brain"></i> Artificial Intelligence (AI)</a></li>
+                <li><a href="#"><i class="fas fa-robot"></i> Deep Learning</a></li>
+                <li><a href="#"><i class="fas fa-comment"></i> Natural Language Processing</a></li>
+                <li><a href="#"><i class="fas fa-eye"></i> Computer Vision</a></li>
+                <li><a href="#"><i class="fas fa-gamepad"></i> Reinforcement Learning</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to handle the dropdown
+        document.getElementById("register-dropdown").addEventListener("click", function() {
+            var dropdownContent = document.querySelector(".register-dropdown-content");
+            if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+            } else {
+                dropdownContent.style.display = "block";
+            }
+        });
+
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.register-button')) {
+                var dropdowns = document.getElementsByClassName("register-dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.style.display === "block") {
+                        openDropdown.style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

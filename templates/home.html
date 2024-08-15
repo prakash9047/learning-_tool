@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KITE</title>
+    <style>
+        /* Reset and basic styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background: #e6f2ff url("https://img.freepik.com/free-vector/hand-drawn-back-school-background_23-2149464866.jpg?size=626&ext=jpg&ga=GA1.1.1224184972.1714003200&semt=ais") no-repeat fixed center;
+            background-size: cover;
+        }
+
+        /* Header and navigation styles */
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 1rem;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Hero section styles */
+        .hero {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .hero form input,
+        .hero form select,
+        .hero form button {
+            margin-right: 0.5rem;
+            padding: 0.7rem 1.5rem;
+            background: #000;
+            color: #fff;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .hero form button:hover {
+            background: #333;
+        }
+
+        /* Create section styles */
+        .create {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .image-box {
+            width: 400px;
+            height: 300px;
+            background: #eee;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 25px;
+        }
+
+        .image-box img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 25px;
+        }
+
+        .create-message {
+            font-size: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .go-button {
+            padding: 1rem 2rem;
+            background: #000;
+            color: #fff;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 1.2rem;
+        }
+
+        .go-button:hover {
+            background: #333;
+        }
+
+        /* Video section styles */
+        .medium-video-box {
+            width: 60%;
+            height: 400px;
+            background: #ccc;
+            border-radius: 25px;
+            margin-top: 2rem;
+            align-self: center;
+        }
+
+        /* Purpose section styles */
+        .purpose {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 2rem;
+            text-align: center;
+            border-radius: 25px;
+            margin-top: 2rem;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .purpose h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .purpose p {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Footer styles */
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        .copyright p {
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">KITE</div>
+            <div class="title">World with the Brilliance of Education</div>
+            <div class="auth-buttons">
+                <a href="{{ url_for('login') }}"><button class="auth-button">Sign in</button></a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <form id="search-form">
+                <input type="text" id="search-input" placeholder="Search for resources...">
+                <select id="subjects" onchange="if (this.value) window.location.href=this.value">
+                    <option>Select Subject</option>
+                    <option value="{{ url_for('ml') }}">ML</option>
+                    <option>AI</option>
+                    <option>NETWORKS</option>
+                    <option>DATA ANALYTICS</option>
+                </select>
+                <select id="Resources">
+                    <option>Resources</option>
+                </select>
+                <select id="grade">
+                    <option>Grade</option>
+                </select>
+                <a href="{{ url_for('teacher') }}">
+                    <button type="button">Teacher</button>
+                </a>
+            </form>
+        </section>
+
+        <section class="create">
+            <div class="image-container">
+                <!-- First image box -->
+                <div class="image-box">
+                    <img src="https://w.wallhaven.cc/full/ne/wallhaven-ney6gl.jpg" alt="First Image">
+                </div>
+                <!-- Second image box -->
+                <div class="image-box">
+                    <img src="https://w.wallhaven.cc/full/0p/wallhaven-0ppjzj.jpg" alt="Second Image">
+                </div>
+            </div>
+            <div class="create-message">
+                Let's create our own study environment
+            </div>
+            <a href="{{ url_for('index') }}" class="go-button">LET'S GO</a>
+
+            <section class="medium-video-box">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/eUiWFntut00" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </section>
+
+            <!-- Purpose section -->
+            <section class="purpose">
+                <h2>Our Purpose</h2>
+                <p>Implemented in an online learning platform like KITE, these features revolutionize education. Personalized learning tailors content to individual needs, optimizing comprehension. Remediation tools offer targeted support, addressing specific learning gaps with interactive resources. Additionally, the platform connects students with top-tier teachers, facilitating one-on-one tutoring and expert guidance. This approach fosters a dynamic and effective learning environment, empowering students to excel academically.
+
+
+
+
+
+                    .</p>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <div class="copyright">
+            <p>&copy; 2024 KITE. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

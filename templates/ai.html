@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI - KITE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Reset and basic styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #333;
+            color: #fff;
+        }
+
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .content {
+            flex: 0 0 calc(75% - 20px);
+            padding: 20px;
+        }
+
+        .sidebar {
+            flex: 0 0 calc(25% - 20px);
+            background-color: rgba(51, 51, 51, 0.9);
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .sidebar h3 {
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 5px;
+        }
+
+        .sidebar ul li a {
+            color: #fff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .sidebar ul li a i {
+            margin-right: 10px;
+        }
+
+        .image-box {
+            width: 100%;
+            max-width: 400px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 25px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .explanation {
+            margin-top: 20px;
+            text-align: justify;
+        }
+        .video-box {
+            width: 100%;
+            max-width: 800px;
+            height: 0;
+            padding-bottom: 45%;
+            position: relative;
+            border-radius: 25px;
+            margin: 20px auto; /* Centering the video box */
+            overflow: hidden;
+        }
+
+        .video-box iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .register-button {
+            display: block;
+            width: 200px;
+            padding: 10px 20px;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 1.2rem;
+            text-align: center;
+            text-decoration: none;
+            margin: 20px auto;
+            position: relative; /* Added position relative for dropdown positioning */
+        }
+
+        .register-button:hover {
+            background-color: #333;
+        }
+
+        .register-dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            z-index: 1;
+            top: 50px; /* Adjust as needed */
+            right: 0; /* Adjust as needed */
+        }
+
+        .register-dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .register-dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .content,
+            .sidebar {
+                flex: 0 0 100%;
+            }
+
+            .sidebar {
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1 class="ml-heading">Artificial Intelligence (AI)</h1>
+
+            <div class="image-box">
+                <img src="https://via.placeholder.com/400x300" alt="AI Image">
+            </div>
+
+            <div class="explanation">
+                <p>Artificial Intelligence (AI) is a branch of computer science that aims to create intelligent machines capable of performing tasks that typically require human intelligence. These tasks include understanding natural language, recognizing patterns, learning from experience, and making decisions.</p>
+
+                <p>The field of AI is broad and encompasses various subfields, including machine learning, natural language processing, computer vision, robotics, and expert systems. Machine learning, in particular, is a subset of AI that focuses on developing algorithms that enable computers to learn from data and make predictions or decisions without being explicitly programmed.</p>
+
+                <p>AI has numerous applications across different industries, including healthcare, finance, transportation, entertainment, and more. Some common examples of AI in use today include virtual assistants like Siri and Alexa, recommendation systems like those used by Netflix and Amazon, and self-driving cars developed by companies like Tesla and Waymo.</p>
+
+                <p>As AI technology continues to advance, it has the potential to revolutionize various aspects of society, from improving healthcare outcomes and increasing productivity to transforming how we interact with technology on a daily basis. However, there are also ethical and societal considerations that must be addressed to ensure that AI is developed and used responsibly.</p>
+            </div>
+
+            <div class="video-box">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <div class="register-button" id="register-dropdown">REGISTER
+                <div class="register-dropdown-content">
+                    <a href="https://onlinecourses.nptel.ac.in/noc24_cs08/preview">Beginner</a>
+                    <a href="https://onlinecourses.nptel.ac.in/noc24_cs14/preview">Intermediate</a>
+                    <a href="https://onlinecourses.swayam2.ac.in/nou24_cs07/preview">Advanced</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <h3>Related Topics</h3>
+            <ul>
+                <li><a href="#"><i class="fas fa-brain"></i> Machine Learning</a></li>
+                <li><a href="#"><i class="fas fa-robot"></i> Robotics</a></li>
+                <li><a href="#"><i class="fas fa-comment"></i> Natural Language Processing</a></li>
+                <li><a href="#"><i class="fas fa-eye"></i> Computer Vision</a></li>
+                <li><a href="#"><i class="fas fa-gamepad"></i> Expert Systems</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to handle the dropdown
+        document.getElementById("register-dropdown").addEventListener("click", function() {
+            var dropdownContent = document.querySelector(".register-dropdown-content");
+            if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+            } else {
+                dropdownContent.style.display = "block";
+            }
+        });
+
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.register-button')) {
+                var dropdowns = document.getElementsByClassName("register-dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.style.display === "block") {
+                        openDropdown.style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
